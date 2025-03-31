@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="bundle.js" defer></script>
+    </head>
+    <body>
+        <h1>Font Editor</h1>
+        <div class="tools">
+            <div class="tools-content">
+                <h2>
+                    Import
+                </h2>
+                <div class="tools-buttons">
+                    <input
+                        type="file"
+                        id="import-input"
+                        accept="application/json"
+                    >
+                    <button id="import">Import</button>
+                </div>
+            </div>
+            <div class="tools-content">
+                <h2>
+                    Export
+                </h2>
+                <div class="tools-buttons">
+                    <button id="export">Export</button>
+                </div>
+            </div>
+        </div>
+        <div id="chars" class="chars"></div>
+    </body>
+</html>
