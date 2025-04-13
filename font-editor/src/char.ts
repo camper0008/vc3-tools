@@ -26,6 +26,7 @@ export function blankChar(): Char {
 
 function rowToBits(row: Row): string {
     return row
+        .toReversed()
         .map((bit: Bit) => bit ? "1" : "0")
         .join("");
 }
@@ -40,8 +41,8 @@ function rowToHex(row: Row): string {
 
 function rowFromBits(bits: string): Row {
     const row = blankRow();
-    for (let bit = 0; bit < 8; ++bit) {
-        row[bit] = bits[bit] === "1";
+    for (let bit = 8; bit > 0; --bit) {
+        row[bit - 1] = bits[bit - 1] === "1";
     }
     return row;
 }
